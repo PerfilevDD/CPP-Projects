@@ -3,7 +3,7 @@
 
 std::vector<int> min_arr(const std::vector<int>& arr, const int& start){
     std::vector<int> return_min_arr (2);
-    return_min_arr[0] = arr[0];
+    return_min_arr[0] = arr[start];
 
     for (int i = start; i < arr.size(); i++){
         if (return_min_arr[0] > arr[i]){
