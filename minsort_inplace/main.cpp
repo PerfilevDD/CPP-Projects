@@ -2,7 +2,10 @@
 #include <vector>
 
 std::vector<int> min_arr(const std::vector<int>& arr, const int& start){
-    std::vector<int> return_min_arr (2);
+    // Function return min of received array with start value 
+    // Returned min and index of min
+
+    std::vector<int> return_min_arr (2); // An array for min and index of min
     return_min_arr[0] = arr[start];
 
     for (int i = start; i < arr.size(); i++){
@@ -18,8 +21,10 @@ std::vector<int> min_arr(const std::vector<int>& arr, const int& start){
 }
 
 void minsort (std::vector<int>& arr){
-    int temp;
-    std::vector<int> mins (2);
+    // MinSort-Algorithm
+
+    int temp; // For swap
+    std::vector<int> mins (2); // An array for swap
 
     for (int i = 0; i < arr.size(); i++){
         mins = min_arr(arr, i);
@@ -42,8 +47,9 @@ void print_array (const std::vector<int>& arr){
 int main(){
     std::vector<int> arr ={9,1,2,0,4,5};
 
-    print_array(arr);
+    print_array(arr); // Prtint an unsorted array
     minsort(arr);
-    print_array(arr);
+    print_array(arr);// Prtint an sorted array
+
     return 0;
 }
